@@ -1,14 +1,46 @@
 $maincolor: #E3B873;
-$font: 'Nunito Sans', sans-serif;
+$font-nunito: 'Nunito Sans', sans-serif;
+$font-yeseva: 'Yeseva One', cursive;
 
 body {
     margin: 0;
+    * {
+        box-sizing: border-box;
+    }
 }
 
-.text-nunito {
-    font-family: $font;
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.text {
+    font-family: $font-nunito;
     font-style: normal;
     font-weight: normal;
+    &-intro {
+        font-size: 22px;
+        line-height: 36px;
+        color: #fff;
+        margin-top: 19px;
+    }
+}
+
+.title {
+    font-family: $font-yeseva;
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0;
+    &-intro {
+        color: #fff;
+        font-size: 40px;
+        line-height: 53px;
+    }
+}
+
+.brand-color {
+    color: $maincolor;
 }
 
 .header {
@@ -16,7 +48,7 @@ body {
     padding: 24px 0;
     &-content {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
         font-size: 11px;
         line-height: 15px;
@@ -32,7 +64,7 @@ body {
         margin: 0;
         padding: 0;
         &__element {
-            margin-right: 47px;
+            margin-left: 47px;
         }
         &__link {
             text-decoration: none;
@@ -55,9 +87,48 @@ body {
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     border: none;
     border-radius: 2px;
-    padding: 13px 33px;
     text-transform: uppercase;
     font-style: italic;
     color: white;
     cursor: pointer;
+    font-size: 11px;
+    &-call {
+        padding: 13px 33px;
+    }
+    &-intro {
+        width: 207px;
+        padding: 19px 0;
+        border: 1px solid $maincolor;
+        margin-right: 20px;
+    }
+    &-transparent {
+        background-color: rgba($color: #000000, $alpha: 0);
+        border: 1px solid #fff;
+        box-shadow: none;
+    }
+}
+
+.intro {
+    height: 707px;
+    background-image: url("../img/intro.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    &-content {
+        z-index: 999;
+        position: relative;
+        padding-top: 194px;
+        padding-left: 134px;
+    }
+    &-dimmed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+    }
+    &-btn_group {
+        margin-top: 41px;
+    }
 }
