@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+}
+
+.text-nunito {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.header {
+  background-color: #131313;
+  padding: 24px 0;
+}
+
+.header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 11px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.header-logo {
+  color: #E3B873;
+}
+
+.header-nav {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav__element {
+  margin-right: 47px;
+}
+
+.header-nav__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header-nav__link__active, .header-nav__link:hover {
+  color: #E3B873;
+}
+
+.header-phone__link {
+  color: #E3B873;
+  margin-right: 45px;
+}
+
+.button {
+  background: #E3B873;
+  -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+          box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  border: none;
+  border-radius: 2px;
+  padding: 13px 33px;
+  text-transform: uppercase;
+  font-style: italic;
+  color: white;
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */

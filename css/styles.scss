@@ -1,0 +1,63 @@
+$maincolor: #E3B873;
+$font: 'Nunito Sans', sans-serif;
+
+body {
+    margin: 0;
+}
+
+.text-nunito {
+    font-family: $font;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.header {
+    background-color: #131313;
+    padding: 24px 0;
+    &-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 11px;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+    &-logo {
+        color: $maincolor;
+    }
+    &-nav {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+        &__element {
+            margin-right: 47px;
+        }
+        &__link {
+            text-decoration: none;
+            color: #fff;
+            &__active, &:hover {
+                color: $maincolor;
+            }
+        }
+    }
+    &-phone {
+        &__link {
+            color: $maincolor;
+            margin-right: 45px;
+        }
+    }
+}
+
+.button {
+    background: $maincolor;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    border: none;
+    border-radius: 2px;
+    padding: 13px 33px;
+    text-transform: uppercase;
+    font-style: italic;
+    color: white;
+    cursor: pointer;
+}
