@@ -40,6 +40,30 @@ button:focus {
   margin-top: 34px;
 }
 
+.text-control {
+  text-align: center;
+  margin-top: 98.5px;
+  color: #363636;
+  font-size: 18px;
+  line-height: 37px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.text-control::before {
+  content: '';
+  position: absolute;
+  width: 55px;
+  height: 1.54px;
+  top: -34.46px;
+  background-color: #E3B873;
+}
+
 .title {
   font-family: "Yeseva One", cursive;
   font-style: normal;
@@ -89,6 +113,15 @@ button:focus {
   left: 0;
   bottom: -6.68px;
   position: absolute;
+}
+
+.title-sub {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.title-control {
+  color: #fff;
 }
 
 .brand-color {
@@ -164,6 +197,7 @@ button:focus {
   color: white;
   cursor: pointer;
   font-size: 11px;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .button-call {
@@ -182,6 +216,12 @@ button:focus {
   border: 1px solid #fff;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.button-control {
+  font-size: 13px;
+  line-height: 27px;
+  width: 200px;
 }
 
 .intro {
@@ -320,5 +360,142 @@ button:focus {
 .arrow-right {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+
+.control {
+  margin-top: -325px;
+}
+
+.control-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.control-content__video {
+  margin-top: 32.21px;
+  position: relative;
+}
+
+.control-content__video::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.control-content__video::after {
+  content: '';
+  position: absolute;
+  top: 174px;
+  left: 365px;
+  background-image: url("../img/play_button.svg");
+  background-color: transparent;
+  background-position: center;
+  background-position-y: -25px;
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  cursor: pointer;
+}
+
+.cam_icon {
+  width: 32.77px;
+  height: 28px;
+  margin-top: 13px;
+  position: relative;
+}
+
+.cam_icon::before {
+  content: '';
+  position: absolute;
+  height: 1.54px;
+  width: 32px;
+  top: 13.23px;
+  left: -40px;
+  background-color: #E3B873;
+}
+
+.cam_icon::after {
+  content: '';
+  position: absolute;
+  height: 1.54px;
+  width: 32px;
+  top: 13.23px;
+  left: 40px;
+  background-color: #E3B873;
+}
+
+.form-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 91.5px;
+  width: 769px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-control input {
+  width: 231px;
+}
+
+.form-control input::-webkit-input-placeholder {
+  color: #000;
+}
+
+.form-control input:-ms-input-placeholder {
+  color: #000;
+}
+
+.form-control input::-ms-input-placeholder {
+  color: #000;
+}
+
+.form-control input::placeholder {
+  color: #000;
+}
+
+.form-input {
+  border: none;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+  padding: 0 0 8px 0;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.form-input_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.form-label {
+  font-size: 13px;
+  line-height: 21px;
+  color: rgba(54, 54, 54, 0.5);
+}
+
+.poof {
+  height: 2000px;
 }
 /*# sourceMappingURL=styles.css.map */

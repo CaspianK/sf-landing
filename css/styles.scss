@@ -37,6 +37,24 @@ button {
         line-height: 27px;
         margin-top: 34px;
     }
+    &-control {
+        text-align: center;
+        margin-top: 98.5px;
+        color: #363636;
+        font-size: 18px;
+        line-height: 37px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 55px;
+            height: 1.54px;
+            top: -34.46px;
+            background-color: $maincolor;
+        }
+    }
 }
 
 .title {
@@ -81,6 +99,13 @@ button {
                 position: absolute;
             }
         }
+    }
+    &-sub {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    &-control {
+        color: #fff;
     }
 }
 
@@ -140,6 +165,7 @@ button {
     color: white;
     cursor: pointer;
     font-size: 11px;
+    font-family: $font-nunito;
     &-call {
         padding: 13px 33px;
     }
@@ -153,6 +179,11 @@ button {
         background-color: rgba($color: #000000, $alpha: 0);
         border: 1px solid #fff;
         box-shadow: none;
+    }
+    &-control {
+        font-size: 13px;
+        line-height: 27px;
+        width: 200px;
     }
 }
 
@@ -256,4 +287,104 @@ button {
     &-right {
         transform: rotate(180deg);
     }
+}
+
+.control {
+    margin-top: -325px;
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__video {
+            margin-top: 32.21px;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-color: rgba($color: #000000, $alpha: 0.8);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 174px;
+                left: 365px;
+                background-image: url("../img/play_button.svg");
+                background-color: transparent;
+                background-position: center;
+                background-position-y: -25px;
+                border-radius: 50%;
+                // background-size: cover;
+                width: 85px;
+                height: 85px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.cam_icon {
+    width: 32.77px;
+    height: 28px;
+    margin-top: 13px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        height: 1.54px;
+        width: 32px;
+        top: 13.23px;
+        left: -40px;
+        background-color: $maincolor;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        height: 1.54px;
+        width: 32px;
+        top: 13.23px;
+        left: 40px;
+        background-color: $maincolor;
+    }
+}
+
+.form {
+    &-control {
+        display: flex;
+        margin-top: 91.5px;
+        width: 769px;
+        justify-content: space-between;
+        input {
+            width: 231px;
+            &::placeholder {
+                color: #000;
+            }
+        }
+    }
+    &-input {
+        border: none;
+        border-bottom: 1px solid rgba($color: #363636, $alpha: 0.3);
+        padding: 0 0 8px 0;
+        font-size: 14px;
+        line-height: 23px;
+        &_wrap {
+            display: flex;
+            flex-direction: column;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    &-label {
+        font-size: 13px;
+        line-height: 21px;
+        color: rgba(54, 54, 54, 0.5);
+    }
+}
+
+.poof {
+    height: 2000px;
 }
