@@ -9,6 +9,13 @@ body {
     }
 }
 
+button {
+    padding: 0;
+    &:focus {
+        outline: none;
+    }
+}
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -18,11 +25,17 @@ body {
     font-family: $font-nunito;
     font-style: normal;
     font-weight: normal;
+    color: #fff;
+    margin: 0;
     &-intro {
         font-size: 22px;
         line-height: 36px;
-        color: #fff;
         margin-top: 19px;
+    }
+    &-projects {
+        font-size: 14px;
+        line-height: 27px;
+        margin-top: 34px;
     }
 }
 
@@ -37,6 +50,38 @@ body {
         font-size: 40px;
         line-height: 53px;
     }
+    &-projects {
+        color: $maincolor;
+        font-size: 27px;
+        line-height: 37px;
+        letter-spacing: -0.07em;
+        &-details {
+            font-size: 18px;
+            color: $maincolor;
+            line-height: 25px;
+        }
+    }
+    &-carousel {
+        border: none;
+        background-color: transparent;
+        color: rgba($color: #fff, $alpha: 0.3);
+        font-size: 14px;
+        line-height: 19px;
+        cursor: pointer;
+        &-active {
+            color: $maincolor;
+            position: relative;
+            &::after {
+                content: '';
+                width: 100%;
+                height: 1px;
+                background-color: $maincolor;
+                left: 0;
+                bottom: -6.68px;
+                position: absolute;
+            }
+        }
+    }
 }
 
 .brand-color {
@@ -46,6 +91,9 @@ body {
 .header {
     background-color: #131313;
     padding: 24px 0;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
     &-content {
         display: flex;
         justify-content: space-evenly;
@@ -69,7 +117,7 @@ body {
         &__link {
             text-decoration: none;
             color: #fff;
-            &__active, &:hover {
+            &_active, &:hover {
                 color: $maincolor;
             }
         }
@@ -109,7 +157,6 @@ body {
 }
 
 .intro {
-    height: 707px;
     background-image: url("../img/intro.jpg");
     background-size: cover;
     background-position: center;
@@ -117,8 +164,7 @@ body {
     &-content {
         z-index: 999;
         position: relative;
-        padding-top: 194px;
-        padding-left: 134px;
+        padding: 194px 0 208px 134px;
     }
     &-dimmed {
         position: absolute;
@@ -128,7 +174,86 @@ body {
         right: 0;
         background-color: rgba($color: #000000, $alpha: 0.7);
     }
-    &-btn_group {
+    &-button_group {
         margin-top: 41px;
+    }
+}
+
+.projects {
+    background-color: #131313;
+    &-content {
+        display: flex;
+        padding: 107px 134px 415px;
+    }
+    &-info {
+        width: 40%;
+        margin-top: 62.36px;
+        position: relative;
+        &-details {
+            width: fit-content;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            margin-top: 42px;
+            grid-row-gap: 34px;
+            grid-column-gap: 19px;
+        }
+        &-button_group {
+            position: absolute;
+            bottom: 2px;
+            display: flex;
+            width: 205.68px;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &-carousel {
+        margin-left: 30px;
+        width: calc(60% - 50px);
+        &-elements {
+            display: flex;
+            width: 95%;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+        }
+        &-image {
+            margin-top: 45.36px;
+        }
+    }
+}
+
+.pointer {
+    width: 9.57px;
+    height: 9.57px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba($color: #fff, $alpha: 0.3);
+    cursor: pointer;
+    &_active {
+        background-color: #fff;
+    }
+    &_group {
+        width: 63.78px;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    &:hover {
+        background-color: #fff;
+    }
+}
+
+.arrow {
+    background-image: url('../img/arrow.svg');
+    width: 41.46px;
+    height: 13.28px;
+    border: none;
+    background-color: transparent; 
+    cursor: pointer;
+    &-right {
+        transform: rotate(180deg);
     }
 }

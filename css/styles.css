@@ -7,6 +7,14 @@ body * {
           box-sizing: border-box;
 }
 
+button {
+  padding: 0;
+}
+
+button:focus {
+  outline: none;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -16,13 +24,20 @@ body * {
   font-family: "Nunito Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
+  color: #fff;
+  margin: 0;
 }
 
 .text-intro {
   font-size: 22px;
   line-height: 36px;
-  color: #fff;
   margin-top: 19px;
+}
+
+.text-projects {
+  font-size: 14px;
+  line-height: 27px;
+  margin-top: 34px;
 }
 
 .title {
@@ -39,6 +54,43 @@ body * {
   line-height: 53px;
 }
 
+.title-projects {
+  color: #E3B873;
+  font-size: 27px;
+  line-height: 37px;
+  letter-spacing: -0.07em;
+}
+
+.title-projects-details {
+  font-size: 18px;
+  color: #E3B873;
+  line-height: 25px;
+}
+
+.title-carousel {
+  border: none;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+  line-height: 19px;
+  cursor: pointer;
+}
+
+.title-carousel-active {
+  color: #E3B873;
+  position: relative;
+}
+
+.title-carousel-active::after {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #E3B873;
+  left: 0;
+  bottom: -6.68px;
+  position: absolute;
+}
+
 .brand-color {
   color: #E3B873;
 }
@@ -46,6 +98,10 @@ body * {
 .header {
   background-color: #131313;
   padding: 24px 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 }
 
 .header-content {
@@ -88,7 +144,7 @@ body * {
   color: #fff;
 }
 
-.header-nav__link__active, .header-nav__link:hover {
+.header-nav__link_active, .header-nav__link:hover {
   color: #E3B873;
 }
 
@@ -129,7 +185,6 @@ body * {
 }
 
 .intro {
-  height: 707px;
   background-image: url("../img/intro.jpg");
   background-size: cover;
   background-position: center;
@@ -139,8 +194,7 @@ body * {
 .intro-content {
   z-index: 999;
   position: relative;
-  padding-top: 194px;
-  padding-left: 134px;
+  padding: 194px 0 208px 134px;
 }
 
 .intro-dimmed {
@@ -152,7 +206,119 @@ body * {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.intro-btn_group {
+.intro-button_group {
   margin-top: 41px;
+}
+
+.projects {
+  background-color: #131313;
+}
+
+.projects-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 107px 134px 415px;
+}
+
+.projects-info {
+  width: 40%;
+  margin-top: 62.36px;
+  position: relative;
+}
+
+.projects-info-details {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  margin-top: 42px;
+  grid-row-gap: 34px;
+  grid-column-gap: 19px;
+}
+
+.projects-info-button_group {
+  position: absolute;
+  bottom: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 205.68px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects-carousel {
+  margin-left: 30px;
+  width: calc(60% - 50px);
+}
+
+.projects-carousel-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.projects-carousel-image {
+  margin-top: 45.36px;
+}
+
+.pointer {
+  width: 9.57px;
+  height: 9.57px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.pointer_active {
+  background-color: #fff;
+}
+
+.pointer_group {
+  width: 63.78px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pointer:hover {
+  background-color: #fff;
+}
+
+.arrow {
+  background-image: url("../img/arrow.svg");
+  width: 41.46px;
+  height: 13.28px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.arrow-right {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 /*# sourceMappingURL=styles.css.map */
