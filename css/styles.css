@@ -124,6 +124,13 @@ button:focus {
   color: #fff;
 }
 
+.title-description {
+  color: #000;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: initial;
+}
+
 .brand-color {
   color: #E3B873;
 }
@@ -409,14 +416,14 @@ button:focus {
   cursor: pointer;
 }
 
-.cam_icon {
+.icon {
   width: 32.77px;
   height: 28px;
   margin-top: 13px;
   position: relative;
 }
 
-.cam_icon::before {
+.icon::before {
   content: '';
   position: absolute;
   height: 1.54px;
@@ -426,7 +433,7 @@ button:focus {
   background-color: #E3B873;
 }
 
-.cam_icon::after {
+.icon::after {
   content: '';
   position: absolute;
   height: 1.54px;
@@ -495,7 +502,81 @@ button:focus {
   color: rgba(54, 54, 54, 0.5);
 }
 
-.poof {
-  height: 2000px;
+.types {
+  margin-top: 148px;
+}
+
+.types-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.types-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 31px;
+  width: 1236px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.types-list__element_description {
+  position: relative;
+  background-color: #fff;
+  margin: -127px auto 0;
+  width: 85%;
+  padding: 25px 34px;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+}
+
+.types-list__element_description_list {
+  color: #959595;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 13px;
+  line-height: 27px;
+  list-style: none;
+  padding-left: 12px;
+  margin: 13px 0 23px;
+}
+
+.types-list__element_description_list li {
+  position: relative;
+}
+
+.types-list__element_description_list li::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: -10px;
+  top: 10px;
+  background-color: #959595;
+  border-radius: 50%;
+}
+
+.types-list__element_description_price {
+  font-family: "Yeseva One", cursive;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #fff;
+  width: 228px;
+  padding: 17px 0;
+  text-align: center;
+  background-color: #E3B873;
+  position: absolute;
+  left: 0;
+  bottom: -27px;
 }
 /*# sourceMappingURL=styles.css.map */

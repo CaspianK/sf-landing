@@ -107,6 +107,12 @@ button {
     &-control {
         color: #fff;
     }
+    &-description {
+        color: #000;
+        font-size: 18px;
+        line-height: 25px;
+        text-transform: initial;
+    }
 }
 
 .brand-color {
@@ -326,7 +332,7 @@ button {
     }
 }
 
-.cam_icon {
+.icon {
     width: 32.77px;
     height: 28px;
     margin-top: 13px;
@@ -385,6 +391,63 @@ button {
     }
 }
 
-.poof {
-    height: 2000px;
+.types {
+    margin-top: 148px;
+    &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-list {
+        display: flex;
+        margin-top: 31px;
+        width: 1236px;
+        justify-content: space-between;
+        &__element {
+            &_description {
+                position: relative;
+                background-color: #fff;
+                margin: -127px auto 0;
+                width: 85%;
+                padding: 25px 34px;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+                &_list {
+                    color: #959595;
+                    font-family: $font-nunito;
+                    font-size: 13px;
+                    line-height: 27px;
+                    list-style: none;
+                    padding-left: 12px;
+                    margin: 13px 0 23px;
+                    li {
+                        position: relative;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 5px;
+                            height: 5px;
+                            left: -10px;
+                            top: 10px;
+                            background-color: #959595;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                &_price {
+                    font-family: $font-yeseva;
+                    font-size: 18px;
+                    line-height: 25px;
+                    text-transform: uppercase;
+                    color: #fff;
+                    width: 228px;
+                    padding: 17px 0;
+                    text-align: center;
+                    background-color: $maincolor;
+                    position: absolute;
+                    left: 0;
+                    bottom: -27px;
+                }
+            }
+        }
+    }
 }
