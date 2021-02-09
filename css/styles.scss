@@ -16,6 +16,10 @@ button {
     }
 }
 
+ul {
+    list-style: none;
+}
+
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -27,17 +31,20 @@ button {
     font-weight: normal;
     color: #fff;
     margin: 0;
-    &-intro {
+    &_logo {
+        color: $maincolor;
+    }
+    &_intro {
         font-size: 22px;
         line-height: 36px;
         margin-top: 19px;
     }
-    &-projects {
+    &_projects {
         font-size: 14px;
         line-height: 27px;
         margin-top: 34px;
     }
-    &-control {
+    &_control {
         text-align: center;
         margin-top: 98.5px;
         color: #363636;
@@ -55,6 +62,20 @@ button {
             background-color: $maincolor;
         }
     }
+    &_advantages {
+        font-size: 18px;
+        line-height: 26px;
+        text-align: center;
+        margin-top: 28px;
+        margin-bottom: 39px;
+    }
+    &_save {
+        font-size: 18px;
+        line-height: 26px;
+        text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+        color: $maincolor;
+        margin-left: 25px;
+    }
 }
 
 .title {
@@ -63,12 +84,12 @@ button {
     font-weight: normal;
     text-transform: uppercase;
     margin: 0;
-    &-intro {
+    &_intro {
         color: #fff;
         font-size: 40px;
         line-height: 53px;
     }
-    &-projects {
+    &_projects {
         color: $maincolor;
         font-size: 27px;
         line-height: 37px;
@@ -79,14 +100,14 @@ button {
             line-height: 25px;
         }
     }
-    &-carousel {
+    &_carousel {
         border: none;
         background-color: transparent;
         color: rgba($color: #fff, $alpha: 0.3);
         font-size: 14px;
         line-height: 19px;
         cursor: pointer;
-        &-active {
+        &_active {
             color: $maincolor;
             position: relative;
             &::after {
@@ -100,14 +121,7 @@ button {
             }
         }
     }
-    &-sub {
-        font-size: 20px;
-        line-height: 28px;
-    }
-    &-control {
-        color: #fff;
-    }
-    &-description {
+    &_type-description {
         color: #000;
         font-size: 18px;
         line-height: 25px;
@@ -115,8 +129,40 @@ button {
     }
 }
 
+.subtitle {
+    font-size: 20px;
+    line-height: 28px;
+    &_control {
+        color: #fff;
+    }
+}
+
 .brand-color {
     color: $maincolor;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    &__item {
+        margin-left: 47px;
+    }
+    &__link {
+        text-decoration: none;
+        color: #fff;
+        &_active, &:hover {
+            color: $maincolor;
+        }
+    }
+}
+
+.callus-block {
+    &__link {
+        color: $maincolor;
+        margin-right: 45px;
+    }
 }
 
 .header {
@@ -133,32 +179,6 @@ button {
         line-height: 15px;
         text-transform: uppercase;
     }
-    &-logo {
-        color: $maincolor;
-    }
-    &-nav {
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        margin: 0;
-        padding: 0;
-        &__element {
-            margin-left: 47px;
-        }
-        &__link {
-            text-decoration: none;
-            color: #fff;
-            &_active, &:hover {
-                color: $maincolor;
-            }
-        }
-    }
-    &-phone {
-        &__link {
-            color: $maincolor;
-            margin-right: 45px;
-        }
-    }
 }
 
 .button {
@@ -172,24 +192,33 @@ button {
     cursor: pointer;
     font-size: 11px;
     font-family: $font-nunito;
-    &-call {
+    &_callus {
         padding: 13px 33px;
     }
-    &-intro {
+    &_intro {
         width: 207px;
         padding: 19px 0;
         border: 1px solid $maincolor;
         margin-right: 20px;
     }
-    &-transparent {
+    &_transparent {
         background-color: rgba($color: #000000, $alpha: 0);
         border: 1px solid #fff;
         box-shadow: none;
     }
-    &-control {
+    &_control {
         font-size: 13px;
         line-height: 27px;
         width: 200px;
+    }
+    &_advantages {
+        font-style: normal;
+        width: 213px;
+        height: 51px;
+        
+        font-size: 13px;
+        line-height: 21px;
+        display: block;
     }
 }
 
@@ -211,7 +240,7 @@ button {
         right: 0;
         background-color: rgba($color: #000000, $alpha: 0.7);
     }
-    &-button_group {
+    &__button-group {
         margin-top: 41px;
     }
 }
@@ -222,41 +251,40 @@ button {
         display: flex;
         padding: 107px 134px 415px;
     }
-    &-info {
+    &__info {
         width: 40%;
         margin-top: 62.36px;
         position: relative;
-        &-details {
-            width: fit-content;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            margin-top: 42px;
-            grid-row-gap: 34px;
-            grid-column-gap: 19px;
-        }
-        &-button_group {
-            position: absolute;
-            bottom: 2px;
-            display: flex;
-            width: 205.68px;
-            justify-content: space-between;
-            align-items: center;
-        }
     }
-    &-carousel {
+    &__details {
+        width: fit-content;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin-top: 42px;
+        grid-row-gap: 34px;
+        grid-column-gap: 19px;
+    }
+    &__slider-control {
+        position: absolute;
+        bottom: 2px;
+        display: flex;
+        width: 205.68px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__carousel {
         margin-left: 30px;
         width: calc(60% - 50px);
-        &-elements {
-            display: flex;
-            width: 95%;
-            justify-content: space-between;
-            list-style: none;
-            padding: 0;
-        }
-        &-image {
-            margin-top: 45.36px;
-        }
+    }
+    &__carousel-elements {
+        display: flex;
+        width: 95%;
+        justify-content: space-between;
+        padding: 0;
+    }
+    &__carousel-image {
+        margin-top: 45.36px;
     }
 }
 
@@ -270,11 +298,10 @@ button {
     &_active {
         background-color: #fff;
     }
-    &_group {
+    &-group {
         width: 63.78px;
         display: flex;
         justify-content: space-between;
-        list-style: none;
         padding: 0;
         margin: 0;
     }
@@ -290,7 +317,7 @@ button {
     border: none;
     background-color: transparent; 
     cursor: pointer;
-    &-right {
+    &_right {
         transform: rotate(180deg);
     }
 }
@@ -301,33 +328,33 @@ button {
         display: flex;
         flex-direction: column;
         align-items: center;
-        &__video {
-            margin-top: 32.21px;
-            position: relative;
-            &::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                background-color: rgba($color: #000000, $alpha: 0.8);
-            }
-            &::after {
-                content: '';
-                position: absolute;
-                top: 174px;
-                left: 365px;
-                background-image: url("../img/play_button.svg");
-                background-color: transparent;
-                background-position: center;
-                background-position-y: -25px;
-                border-radius: 50%;
-                // background-size: cover;
-                width: 85px;
-                height: 85px;
-                cursor: pointer;
-            }
+    }
+    &__video {
+        margin-top: 32.21px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba($color: #000000, $alpha: 0.8);
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 174px;
+            left: 365px;
+            background-image: url("../img/play-button.svg");
+            background-color: transparent;
+            background-position: center;
+            background-position-y: -25px;
+            border-radius: 50%;
+            // background-size: cover;
+            width: 85px;
+            height: 85px;
+            cursor: pointer;
         }
     }
 }
@@ -358,7 +385,7 @@ button {
 }
 
 .form {
-    &-control {
+    &_control {
         display: flex;
         margin-top: 91.5px;
         width: 769px;
@@ -370,24 +397,62 @@ button {
             }
         }
     }
-    &-input {
+    &__input {
         border: none;
         border-bottom: 1px solid rgba($color: #363636, $alpha: 0.3);
         padding: 0 0 8px 0;
         font-size: 14px;
         line-height: 23px;
-        &_wrap {
+        &-wrap {
             display: flex;
             flex-direction: column;
         }
         &:focus {
             outline: none;
         }
+        &_white {
+            border-bottom: 1px solid rgba($color: #fff, $alpha: 0.15);
+        }
     }
-    &-label {
+    &__label {
         font-size: 13px;
         line-height: 21px;
         color: rgba(54, 54, 54, 0.5);
+        &_white {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+    &_advantages {
+        background-color: #131313;
+        padding: 28px 49px;
+        height: fit-content;
+        .form__input {
+            width: 408px;
+            background-color: #131313;
+            &::placeholder {
+                color: #fff;
+            }
+        }
+        .form__input-wrap:nth-child(-n + 3) {
+            margin-bottom: 48px;
+        }
+    }
+    &__checkbox {
+        width: auto;
+        &-label {
+            color: #fff;
+            font-family: $font-nunito;
+            font-size: 14px;
+            line-height: 163.68%;
+        }
+        &-wrap {
+            margin-top: 16px;
+        }
+    }
+    &__button-wrap {
+        margin-top: 39px;
+        display: flex;
+        justify-content: flex-end;
     }
 }
 
@@ -398,56 +463,99 @@ button {
         flex-direction: column;
         align-items: center;
     }
-    &-list {
+    &__list {
         display: flex;
         margin-top: 31px;
         width: 1236px;
         justify-content: space-between;
-        &__element {
-            &_description {
-                position: relative;
-                background-color: #fff;
-                margin: -127px auto 0;
-                width: 85%;
-                padding: 25px 34px;
-                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-                &_list {
-                    color: #959595;
-                    font-family: $font-nunito;
-                    font-size: 13px;
-                    line-height: 27px;
-                    list-style: none;
-                    padding-left: 12px;
-                    margin: 13px 0 23px;
-                    li {
-                        position: relative;
-                        &::before {
-                            content: '';
-                            position: absolute;
-                            width: 5px;
-                            height: 5px;
-                            left: -10px;
-                            top: 10px;
-                            background-color: #959595;
-                            border-radius: 50%;
-                        }
-                    }
-                }
-                &_price {
-                    font-family: $font-yeseva;
-                    font-size: 18px;
-                    line-height: 25px;
-                    text-transform: uppercase;
-                    color: #fff;
-                    width: 228px;
-                    padding: 17px 0;
-                    text-align: center;
-                    background-color: $maincolor;
-                    position: absolute;
-                    left: 0;
-                    bottom: -27px;
-                }
+    }
+    &__description {
+        position: relative;
+        background-color: #fff;
+        margin: -127px auto 0;
+        width: 85%;
+        padding: 25px 34px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+    }
+    &__description-list {
+        color: #959595;
+        font-family: $font-nunito;
+        font-size: 13px;
+        line-height: 27px;
+        padding-left: 12px;
+        margin: 13px 0 23px;
+        li {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                left: -10px;
+                top: 10px;
+                background-color: #959595;
+                border-radius: 50%;
             }
         }
+    }
+    &__price {
+        font-family: $font-yeseva;
+        font-size: 18px;
+        line-height: 25px;
+        text-transform: uppercase;
+        color: #fff;
+        width: 228px;
+        padding: 17px 0;
+        text-align: center;
+        background-color: $maincolor;
+        position: absolute;
+        left: 0;
+        bottom: -27px;
+    }
+}
+
+.advantages {
+    margin-top: 257px; 
+    background-image: url('../img/advantages.png');
+    background-repeat: no-repeat;
+    &-content {
+        display: flex;
+    }
+    &__list {
+        margin-left: 249px;
+        font-family: $font-nunito;
+        font-size: 14px;
+        line-height: 19px;
+        color: #363636;
+        padding: 0;
+        li {
+            margin-bottom: 102px;
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__bullet {
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: #fff;
+        box-sizing: content-box;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        border-radius: 50%;
+        border: 8px solid #fff;
+        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+        background-color: $maincolor;
+        margin-right: 15px;
+    }
+    &__form-wrap {
+        margin-left: 206px;
+    }
+    &__save-wrap {
+        display: flex;
+        align-items: center;
+        margin-top: 38px;
+        margin-left: 33px;
     }
 }
