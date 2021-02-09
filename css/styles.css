@@ -146,6 +146,12 @@ ul {
   text-transform: initial;
 }
 
+.title_styles {
+  font-size: 27px;
+  line-height: 37px;
+  color: #E3B873;
+}
+
 .subtitle {
   font-size: 20px;
   line-height: 28px;
@@ -259,6 +265,15 @@ ul {
   display: block;
 }
 
+.dimmed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .intro {
   background-image: url("../img/intro.jpg");
   background-size: cover;
@@ -270,15 +285,6 @@ ul {
   z-index: 999;
   position: relative;
   padding: 194px 0 208px 134px;
-}
-
-.intro-dimmed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .intro__button-group {
@@ -733,5 +739,91 @@ ul {
           align-items: center;
   margin-top: 38px;
   margin-left: 33px;
+}
+
+.styles {
+  height: 864px;
+  background-image: url("../img/styles.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 242px;
+  position: relative;
+}
+
+.styles-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 999;
+  position: relative;
+  padding: 0 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.styles__list {
+  width: 411px;
+  margin-top: 137.5px;
+}
+
+.styles__style-list {
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+  color: #fff;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.styles__style-list li {
+  margin-bottom: 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.styles__style_active {
+  color: #E3B873;
+  position: relative;
+}
+
+.styles__style_active::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  background-color: #E3B873;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.styles__gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.styles__gallery div:first-child {
+  margin-top: -40px;
+}
+
+.styles__gallery div:nth-last-child(1) {
+  margin-top: -112px;
+}
+
+.styles__gallery > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 43px;
+}
+
+.styles__gallery > * * {
+  margin-bottom: 40px;
 }
 /*# sourceMappingURL=styles.css.map */
