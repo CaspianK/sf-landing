@@ -88,6 +88,25 @@ ul {
   margin-left: 25px;
 }
 
+.text_clients {
+  font-size: 18px;
+  line-height: 29px;
+  color: #363636;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.text_review {
+  font-size: 13px;
+  line-height: 23px;
+  color: #959595;
+}
+
+.text_review:first-of-type {
+  margin-bottom: 10px;
+}
+
 .title {
   font-family: "Yeseva One", cursive;
   font-style: normal;
@@ -150,6 +169,13 @@ ul {
   font-size: 27px;
   line-height: 37px;
   color: #E3B873;
+}
+
+.title_name {
+  font-size: 18px;
+  line-height: 23px;
+  color: #181818;
+  text-transform: initial;
 }
 
 .subtitle {
@@ -617,7 +643,7 @@ ul {
           align-items: center;
 }
 
-.types__list {
+.horizontal-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -628,17 +654,27 @@ ul {
           justify-content: space-between;
 }
 
-.types__description {
+.horizontal-list__description {
   position: relative;
   background-color: #fff;
-  margin: -127px auto 0;
-  width: 85%;
-  padding: 25px 34px;
   -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
           box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 }
 
-.types__description-list {
+.horizontal-list__description_types {
+  margin: -127px auto 0;
+  width: 85%;
+  padding: 25px 34px;
+}
+
+.horizontal-list__description_clients {
+  padding-top: 24px;
+  padding-left: 20px;
+  width: 376px;
+  padding-bottom: 67px;
+}
+
+.horizontal-list__description-list {
   color: #959595;
   font-family: "Nunito Sans", sans-serif;
   font-size: 13px;
@@ -647,11 +683,11 @@ ul {
   margin: 13px 0 23px;
 }
 
-.types__description-list li {
+.horizontal-list__description-list li {
   position: relative;
 }
 
-.types__description-list li::before {
+.horizontal-list__description-list li::before {
   content: '';
   position: absolute;
   width: 5px;
@@ -662,19 +698,70 @@ ul {
   border-radius: 50%;
 }
 
-.types__price {
+.horizontal-list__additional {
   font-family: "Yeseva One", cursive;
-  font-size: 18px;
-  line-height: 25px;
   text-transform: uppercase;
   color: #fff;
-  width: 228px;
-  padding: 17px 0;
-  text-align: center;
   background-color: #E3B873;
   position: absolute;
   left: 0;
   bottom: -27px;
+}
+
+.horizontal-list__additional_types {
+  width: 228px;
+  padding: 17px 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.horizontal-list__additional_clients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 294px;
+  height: 53px;
+  padding: 11px 17px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 17px;
+  line-height: 24px;
+  position: absolute;
+}
+
+.horizontal-list__additional_clients img {
+  margin-right: 15px;
+}
+
+.horizontal-list__additional_clients p:first-of-type {
+  margin-right: 31px;
+  position: relative;
+}
+
+.horizontal-list__additional_clients p:first-of-type::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background-color: #fff;
+  height: 53px;
+  right: -14px;
+  top: -15px;
+}
+
+.horizontal-list__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 22px;
+}
+
+.horizontal-list__profile img {
+  margin-right: 23px;
 }
 
 .advantages {
@@ -825,5 +912,26 @@ ul {
 
 .styles__gallery > * * {
   margin-bottom: 40px;
+}
+
+.clients {
+  margin-top: 110.5px;
+  padding-bottom: 355px;
+  background-image: url("../img/clients.png");
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+.clients-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */
