@@ -238,7 +238,7 @@ ul {
   margin-right: 45px;
 }
 
-.header {
+.menu {
   background-color: #131313;
   padding: 24px 0;
   position: -webkit-sticky;
@@ -247,7 +247,7 @@ ul {
   z-index: 9999;
 }
 
-.header-content {
+.menu-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
