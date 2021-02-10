@@ -154,6 +154,20 @@ ul {
         color: #181818;
         text-transform: initial;
     }
+    &_questions{
+        font-size: 20px;
+        line-height: 28px;
+        color: #fff;
+        align-self: center;
+    }
+    &_address {
+        font-size: 20px;
+        line-height: 28px;
+        color: $maincolor;
+        margin-top: 52px;
+        margin-bottom: 26px;
+        text-align: center;
+    }
 }
 
 .subtitle {
@@ -242,10 +256,17 @@ ul {
         font-style: normal;
         width: 213px;
         height: 51px;
-        
         font-size: 13px;
         line-height: 21px;
         display: block;
+    }
+    &_questions {
+        font-size: 13px;
+        line-height: 27px;
+        width: 200px;
+        height: 51px;
+        align-self: center;
+        font-style: initial;
     }
 }
 
@@ -434,6 +455,9 @@ ul {
         &-wrap {
             display: flex;
             flex-direction: column;
+            &_questions {
+                width: 231px;
+            }
         }
         &:focus {
             outline: none;
@@ -475,12 +499,41 @@ ul {
         }
         &-wrap {
             margin-top: 16px;
+            &_questions {
+                margin-top: 46.5px;
+                margin-bottom: 50.5px;
+                align-self: center;
+            }
         }
     }
     &__button-wrap {
         margin-top: 39px;
         display: flex;
         justify-content: flex-end;
+    }
+    &_questions {
+        padding: 34.5px 181.5px;
+        background-color: #181818;
+        width: fit-content;
+        margin-top: -234.5px;
+        &-wrap {
+            width: 520px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .form__input {
+            background-color: #181818;
+            &::placeholder {
+                color: #fff;
+            }
+        }
+    }
+    &__firstrow-wrap {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 46px;
+        margin-bottom: 49px;
     }
 }
 
@@ -594,9 +647,9 @@ ul {
     background-repeat: no-repeat;
     &-content {
         display: flex;
+        justify-content: space-around;
     }
     &__list {
-        margin-left: 249px;
         font-family: $font-nunito;
         font-size: 14px;
         line-height: 19px;
@@ -622,9 +675,6 @@ ul {
         box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
         background-color: $maincolor;
         margin-right: 15px;
-    }
-    &__form-wrap {
-        margin-left: 206px;
     }
     &__save-wrap {
         display: flex;
@@ -702,7 +752,7 @@ ul {
 
 .clients {
     margin-top: 110.5px;
-    padding-bottom: 355px;
+    padding-bottom: 382px;
     background-image: url('../img/clients.png');
     background-repeat: repeat-x;
     background-position: bottom;
@@ -710,5 +760,26 @@ ul {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+}
+
+.contact {
+    background-image: url('../img/contact.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    &-content {
+        position: relative;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 66px;
+    }
+    &__socials {
+        display: flex;
+        width: 71px;
+        justify-content: space-between;
+        margin-bottom: 43px;
     }
 }
