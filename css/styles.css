@@ -1324,6 +1324,9 @@ ul {
     margin-top: 73px;
     position: relative;
   }
+  .projects__slider img {
+    width: 100%;
+  }
   .projects__slider::before {
     content: '';
     position: absolute;
