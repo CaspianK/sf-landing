@@ -815,6 +815,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   margin-right: 9px;
+  cursor: pointer;
 }
 
 .checkbox-icon::before {

@@ -605,6 +605,7 @@ ul {
     justify-content: center;
     align-items: center;
     margin-right: 9px;
+    cursor: pointer;
     &::before {
         content:"\2713";
         opacity: 0;
