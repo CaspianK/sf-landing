@@ -15,8 +15,8 @@
             <div class="text text_logo">
                 IC "REPAIR DESIGN PROJECT"
             </div>
-            <nav>
-                <ul class="nav text">
+            <nav class="nav">
+                <ul class="nav__list text">
                     <li class="nav__item"><a class="nav__link nav__link_active" href="#">Home</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Projects</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Measurement</a></li>
@@ -38,8 +38,8 @@
             <div class="container intro-content">
                 <h1 class="title title_intro">Turnkey Repair in the <br>
                     city of <span class="brand-color">Rostov-on-Don</span></h1>
-                <p class="text text_intro">Get ready-made turnkey repairs on time <br>
-                    with work time saving up to 45 days and 20% from <br>
+                <p class="text text_intro">Get ready-made turnkey repairs on time 
+                    with work time saving up to 45 days and 20% from 
                     cost of materials due to the organization of work</p>
                 <div class="intro__button-group">
                     <button class="button button_intro">Calculate the cost</button>
@@ -52,9 +52,10 @@
             <div class="container projects-content">
                 <div class="projects__info">
                     <h2 class="title title_projects">Completed<br>projects</h2>
-                    <p class="text text_projects">Only a small part of the work performed by our company is presented <br>
-                        on the site. For 14 years on in the construction <br>
+                    <p class="text text_projects">Only a small part of the work performed by our company is presented 
+                        on the site. For 14 years on in the construction 
                         market we have made happy more than 1000 families</p>
+                    <img src="./img/project2.png" alt="Project #2" class="projects__slider">
                     <div class="projects__details">
                         <div>
                             <h3 class="title title_projects-details">City:</h3>
@@ -99,20 +100,28 @@
                 <h2 class="title subtitle subtitle_control">Online control</h2>
                 <div class="icon"><img src="./img/cam-icon.svg" alt="Camera icon"></div>
                 <div class="control__video"><img src="./img/control.png" alt="Video thumbnail"></div>
-                <p class="text text_control">At each facility, a camera is installed that broadcasts the progress of work on the<br>
-                    clock. At any time, you can go to our website and monitor the progress of work in<br>
-                    your apartment. You can watch the live broadcast from one of our facilities!<br>
+                <p class="text text_control">At each facility, a camera is installed that broadcasts the progress of work on the 
+                    clock. At any time, you can go to our website and monitor the progress of work in 
+                    your apartment. You can watch the live broadcast from one of our facilities! 
                     Leave a request below and you will receive a link to the broadcast.</p>
                 <form class="form_control">
-                    <div class="form__input-wrap">
-                        <label class="form__label text" for="control-name">Name</label>
-                        <input class="form__input" type="text" name="name" id="control-name" placeholder="What is your name:">
+                    <div class="form__control-wrap">
+                        <div class="form__input-wrap">
+                            <label class="form__label text" for="control-name">Name</label>
+                            <input class="form__input" type="text" name="name" id="control-name" placeholder="What is your name:">
+                        </div>
+                        <div class="form__input-wrap">
+                            <label class="form__label text" for="control-phone">Phone</label>
+                            <input class="form__input" type="text" name="phone" id="control-phone" placeholder="Your phone number:">
+                        </div>
+                        <button class="button button_control" type="submit">Submit</button>
                     </div>
-                    <div class="form__input-wrap">
-                        <label class="form__label text" for="control-phone">Phone</label>
-                        <input class="form__input" type="text" name="phone" id="control-phone" placeholder="Your phone number:">
+                    <div class="form__checkbox-wrap">
+                        <label class="form__checkbox-label" for="control-checkbox">
+                            <input type="checkbox" class="form__checkbox" name="control-checkbox" id="control-checkbox">
+                            <span class="checkbox-icon"></span>I agree to the processing of personal data
+                        </label>
                     </div>
-                    <button class="button button_control" type="submit">Submit</button>
                 </form>
             </div>
         </section>
@@ -198,8 +207,10 @@
                             <input class="form__input form__input_white" type="text" name="email" id="advantages-email" placeholder="Your email:">
                         </div>
                         <div class="form__checkbox-wrap">
-                            <input type="checkbox" class="form__checkbox" name="advantages-checkbox" id="advantages-checkbox">
-                            <label class="form__checkbox-label" for="advantages-checkbox">I agree to the processing of personal data</label>
+                            <label class="form__checkbox-label" for="advantages-checkbox">
+                                <input type="checkbox" class="form__checkbox" name="advantages-checkbox" id="advantages-checkbox">
+                                <span class="checkbox-icon"></span>I agree to the processing of personal data
+                            </label>
                         </div>
                         <div class="form__button-wrap">
                             <button class="button button_advantages" type="submit">Call the measurer</button>
@@ -314,8 +325,10 @@
         </section>
         <section class="contact">
             <div class="container contact-content">
+                <h2 class="title subtitle title_fantasies">We realize your wildest&nbsp;fantasies</h2>
+                <div class="contact__mobile-carousel"><img src="./img/styles-mobile.png" alt="Style"></div>
                 <div class="form_questions">
-                    <div class="form_questions-wrap">
+                    <form class="form_questions-wrap">
                         <h2 class="title title_questions">Have any questions?</h2>
                         <div class="form__firstrow-wrap">
                             <div class="form__input-wrap form__input-wrap_questions">
@@ -332,16 +345,18 @@
                             <input class="form__input form__input_white" type="text" name="question" id="contact-question" placeholder="I want to know:">
                         </div>
                         <div class="form__checkbox-wrap form__checkbox-wrap_questions">
-                            <input type="checkbox" class="form__checkbox" name="contact-checkbox" id="contact-checkbox">
-                            <label class="form__checkbox-label" for="contact-checkbox">I agree to the processing of personal data</label>
+                            <label class="form__checkbox-label" for="contact-checkbox">
+                                <input type="checkbox" class="form__checkbox" name="contact-checkbox" id="contact-checkbox">
+                                <span class="checkbox-icon"></span>I agree to the processing of personal data
+                            </label>
                         </div>
                         <button class="button button_questions" type="submit">Submit</button>
-                    </div>
+                    </form>
                 </div>
-                <h2 class="title title_address">Rostov-on-Don, Nansen St., 239 Shopping Center<br>Decorum Tel +7 (928) 768 32 29</h2>
+                <h2 class="title title_address">Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel +7&nbsp;(928)&nbsp;768&nbsp;32&nbsp;29</h2>
                 <div class="contact__socials">
-                    <img src="./img/mail-icon.png" alt="Mail icon">
-                    <img src="./img/ig-icon.png" alt="Instagram icon">
+                    <a href="https://www.instagram.com/" target="_blank"><img src="./img/mail-icon.svg" alt="Mail icon"></a>
+                    <a href="mailto: support@rdp.ru"><img src="./img/ig-icon.svg" alt="Instagram icon"></a>
                 </div>
                 <img src="./img/map.png" alt="Map" class="contact__map">
             </div>
@@ -353,8 +368,8 @@
             <div class="text text_logo">
                 IC "REPAIR DESIGN PROJECT"
             </div>
-            <nav>
-                <ul class="nav text">
+            <nav class="nav">
+                <ul class="nav__list text">
                     <li class="nav__item"><a class="nav__link nav__link_active" href="#">Home</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Projects</a></li>
                     <li class="nav__item"><a class="nav__link" href="#">Measurement</a></li>

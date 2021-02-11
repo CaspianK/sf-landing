@@ -4,6 +4,7 @@ $font-yeseva: 'Yeseva One', cursive;
 
 body {
     margin: 0;
+    min-width: 325px;
     * {
         box-sizing: border-box;
     }
@@ -38,6 +39,7 @@ ul {
         font-size: 22px;
         line-height: 36px;
         margin-top: 19px;
+        width: 510px;
     }
     &_projects {
         font-size: 14px;
@@ -53,6 +55,7 @@ ul {
         position: relative;
         display: flex;
         justify-content: center;
+        width: 681px;
         &::before {
             content: '';
             position: absolute;
@@ -123,6 +126,19 @@ ul {
         font-size: 14px;
         line-height: 19px;
         cursor: pointer;
+        &:hover {
+            color: $maincolor;
+            position: relative;
+            &::after {
+                content: '';
+                width: 100%;
+                height: 1px;
+                background-color: $maincolor;
+                left: 0;
+                bottom: -6.68px;
+                position: absolute;
+            }
+        }
         &_active {
             color: $maincolor;
             position: relative;
@@ -167,6 +183,10 @@ ul {
         margin-top: 52px;
         margin-bottom: 26px;
         text-align: center;
+        width: 589px;
+    }
+    &_fantasies {
+        display: none;
     }
 }
 
@@ -183,10 +203,12 @@ ul {
 }
 
 .nav {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+    }
     &__item {
         margin-left: 47px;
     }
@@ -194,6 +216,7 @@ ul {
         text-decoration: none;
         color: #fff;
         &_active, &:hover {
+            transition: .5s;
             color: $maincolor;
         }
     }
@@ -202,7 +225,6 @@ ul {
 .callus-block {
     &__link {
         color: $maincolor;
-        margin-right: 45px;
     }
 }
 
@@ -225,7 +247,7 @@ ul {
 .button {
     background: $maincolor;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-    border: none;
+    border: 1px solid transparent;
     border-radius: 2px;
     text-transform: uppercase;
     font-style: italic;
@@ -233,24 +255,36 @@ ul {
     cursor: pointer;
     font-size: 11px;
     font-family: $font-nunito;
+    &:hover {
+        transition: .5s;
+        background-color: #bb9456;
+        border: 1px solid $maincolor;
+    }
     &_callus {
         padding: 13px 33px;
+        margin-left: 45px;
     }
     &_intro {
         width: 207px;
         padding: 19px 0;
         border: 1px solid $maincolor;
-        margin-right: 20px;
     }
     &_transparent {
         background-color: rgba($color: #000000, $alpha: 0);
         border: 1px solid #fff;
         box-shadow: none;
+        &:hover {
+            transition: .5s;
+            border: 1px solid #fff;
+            background-color: #fff;
+            color: #000;
+        }
     }
     &_control {
         font-size: 13px;
         line-height: 27px;
         width: 200px;
+        font-style: initial;
     }
     &_advantages {
         font-style: normal;
@@ -291,6 +325,9 @@ ul {
     }
     &__button-group {
         margin-top: 41px;
+        display: flex;
+        width: 434px;
+        justify-content: space-between;
     }
 }
 
@@ -316,7 +353,7 @@ ul {
     }
     &__slider-control {
         position: absolute;
-        bottom: 2px;
+        bottom: 0;
         display: flex;
         width: 205.68px;
         justify-content: space-between;
@@ -334,6 +371,10 @@ ul {
     }
     &__carousel-image {
         margin-top: 45.36px;
+        display: block;
+    }
+    &__slider {
+        display: none;
     }
 }
 
@@ -355,6 +396,7 @@ ul {
         margin: 0;
     }
     &:hover {
+        transition: .5s;
         background-color: #fff;
     }
 }
@@ -393,14 +435,10 @@ ul {
         &::after {
             content: '';
             position: absolute;
-            top: 174px;
-            left: 365px;
+            top: calc(50% - 42.5px);
+            left: calc(50% - 42.5px);
             background-image: url("../img/play-button.svg");
             background-color: transparent;
-            background-position: center;
-            background-position-y: -25px;
-            border-radius: 50%;
-            // background-size: cover;
             width: 85px;
             height: 85px;
             cursor: pointer;
@@ -437,14 +475,30 @@ ul {
     &_control {
         display: flex;
         margin-top: 91.5px;
-        width: 769px;
-        justify-content: space-between;
-        input {
+        align-items: center;
+        flex-direction: column;
+        .form__input {
             width: 231px;
             &::placeholder {
                 color: #000;
             }
         }
+        .form__checkbox {
+            &-label {
+                color: #181818;
+                font-size: 14px;
+                line-height: 23px;
+                font-family: $font-nunito;
+            }
+            &-wrap {
+                margin-top: 35px;
+            }
+        }
+    }
+    &__control-wrap {
+        display: flex;
+        justify-content: space-between;
+        width: 769px;
     }
     &__input {
         border: none;
@@ -464,6 +518,7 @@ ul {
         }
         &_white {
             border-bottom: 1px solid rgba($color: #fff, $alpha: 0.15);
+            color: #fff;
         }
     }
     &__label {
@@ -491,6 +546,10 @@ ul {
     }
     &__checkbox {
         width: auto;
+        display: none;
+        &:checked + .checkbox-icon::before {
+            opacity: 1;
+        }
         &-label {
             color: #fff;
             font-family: $font-nunito;
@@ -534,6 +593,22 @@ ul {
         justify-content: space-between;
         margin-top: 46px;
         margin-bottom: 49px;
+    }
+}
+
+.checkbox-icon {
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+    background: $maincolor;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    margin-right: 9px;
+    &::before {
+        content:"\2713";
+        opacity: 0;
+        transition: .2s;
     }
 }
 
@@ -689,6 +764,7 @@ ul {
     background-image: url('../img/styles.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     margin-top: 242px;
     position: relative;
     &-content {
@@ -713,6 +789,19 @@ ul {
                 margin-bottom: 25px;
                 width: fit-content;
                 cursor: pointer;
+                &:hover {
+                    color: $maincolor;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        height: 1px;
+                        background-color: $maincolor;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                    }
+                }
             }
         }
         &_active {
@@ -781,5 +870,317 @@ ul {
         width: 71px;
         justify-content: space-between;
         margin-bottom: 43px;
+        img {
+            width: 28px;
+            height: 28px;
+        }
+    }
+    &__mobile-carousel {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1299px) {
+    .menu-content {
+        padding-left: 18px;
+        padding-right: 18px;
+        justify-content: space-between;
+    }
+    .nav {
+        display: none;
+    }
+    .button {
+        &_callus {
+            display: none;
+        }
+        &_intro {
+            width: 100%;
+            &:first-of-type {
+                margin-bottom: 26px;
+            }
+        }
+        &_control {
+            position: absolute;
+            bottom: -160px;
+            width: 100%;
+            height: 51px;
+        }
+        &_questions {
+            width: 100%;
+        }
+    }
+    .callus-block__link {
+        color: #fff;
+        text-decoration: none;
+    }
+    .title {
+        &_intro {
+            font-size: 23px;
+            line-height: 31px;
+        }
+        &_projects {
+            font-size: 22px;
+            line-height: 30px;
+            text-align: center;
+            &-details {
+                font-size: 14px;
+                line-height: 19px;
+                +.text {
+                    font-size: 11px;
+                    line-height: 15px;
+                    margin-top: 11px;
+                }
+            }
+        }
+        &_type-description {
+            font-size: 15px;
+            line-height: 21px;
+        }
+        &_address {
+            font-size: 18px;
+            line-height: 25px;
+            width: 100%;
+            order: 2;
+            margin-top: 42px;
+            margin-bottom: 24px;
+        }
+        &_fantasies {
+            text-align: center;
+            color: $maincolor;
+            display: block;
+            margin-top: -211px;
+        }
+    }
+    .intro {
+        &-content {
+            padding: 85px 18px 61px;
+        }
+        &__button-group {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+    .text {
+        &_intro {
+            font-size: 14px;
+            line-height: 135.84%;
+            margin-top: 16px;
+            width: 300px;
+        }
+        &_projects {
+            font-size: 11px;
+            line-height: 158.48%;
+            text-align: center;
+            margin-top: 22px;
+        }
+        &_control {
+            margin-top: 50px;
+            font-size: 11px;
+            line-height: 19px;
+            color: #fff;
+            width: auto;
+            &::before {
+                top: -21px;
+            }
+        }
+    }
+    .projects {
+        padding-bottom: 59px;
+        &-content {
+            flex-direction: column;
+            padding: 36px 18px 0;
+        }
+        &__info {
+            margin-top: 0;
+            width: auto;
+        }
+        &__carousel {
+            display: none;
+        }
+        &__slider-control {
+            display: none;
+        }
+        &__details {
+            grid-row-gap: 27px;
+            margin-top: 36px;
+        }
+        &__slider {
+            display: block;
+            width: 100%;
+            margin-top: 73px;
+        }
+    }
+    .control {
+        padding: 0 18px;
+        margin-top: -1px;
+        background-color: #131313;
+        width: 100%;
+        padding-bottom: 88.5px;
+        &__video {
+            margin-top: 40px;
+            text-align: center;
+            width: 100%;
+            &::after {
+                width: 37px;
+                height: 37px;
+                top: calc(50% - 18.5px);
+                left: calc(50% - 18.5px);
+            }
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+    .subtitle {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .form {
+        &_control {
+            margin-top: 78px;
+            width: 100%;
+            .form__input {
+                width: 100%;
+                color: #fff;
+                &::placeholder {
+                    color: #fff;
+                }
+            }
+            .form__checkbox {
+                &-label {
+                    color: #fff;
+                }
+                &-wrap {
+                    margin-top: 26.5px;
+                }
+            }
+        }
+        &__control-wrap {
+            flex-direction: column;
+            width: 100%;
+            position: relative;
+        }
+        &__input {
+            border-bottom: 1px solid rgba($color: #fff, $alpha: 0.15);
+            background-color: #131313;
+            line-height: 19px;
+            &-wrap_questions {
+                width: 100%;
+                &:first-of-type {
+                    margin-bottom: 63px;
+                }
+            }
+        }
+        &__label {
+            color: rgba($color: #fff, $alpha: 0.5);
+        }
+        &__checkbox-wrap {
+            align-self: start;
+            &_questions {
+                margin-top: 22px;
+                margin-bottom: 63px;
+            }
+        }
+        &_questions {
+            margin-top: 0;
+            padding: 0;
+            width: 100%;
+            &-wrap {
+                width: 100%;
+            }
+        }
+        &__firstrow-wrap {
+            flex-direction: column;
+            margin-top: 52px;
+            margin-bottom: 63px;
+        }
+    }
+    .types {
+        margin-top: 83px;
+        padding: 0 18px 207px;
+    }
+    .horizontal-list {
+        flex-direction: column;
+        width: 100%;
+        >div {
+            margin-bottom: 79px;
+            img {
+                width: 100%;
+            }
+        }
+        &__description {
+            margin-left: 0;
+            margin-top: -142px;
+            &-list {
+                font-size: 13px;
+                line-height: 22px;
+            }
+        }
+        &__additional {
+            bottom: -21.5px;
+            &_types {
+                font-size: 15px;
+                line-height: 21px;
+                width: 190px;
+                padding: 11px 0;
+            }
+        }
+    }
+    .advantages, .clients, .styles, footer {
+        display: none;
+    }
+    .contact {
+        padding: 0 18px;
+        background-color: #181818;
+        background-image: none;
+        &-content {
+            padding-bottom: 49px;
+        }
+        .dimmed {
+            display: none;
+        }
+        &__socials {
+            width: 99px;
+            order: 2;
+            margin-bottom: 0;
+            img {
+                width: 39px;
+                height: 39px;
+            }
+        }
+        &__map {
+            width: 100%;
+            margin-top: 46px;
+        }
+        &__mobile-carousel {
+            display: block;
+            margin-top: 37px;
+            margin-bottom: 52px;
+            position: relative;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                background-image: url('../img/carousel-control.svg');
+                top: calc(50% - 26px);
+                left: 14px;
+                width: 36px;
+                height: 36px;
+            }
+            &::after {
+                content: '';
+                transform: rotate(180deg);
+                position: absolute;
+                background-image: url('../img/carousel-control.svg');
+                top: calc(50% - 26px);
+                right: 14px;
+                width: 36px;
+                height: 36px;
+            }
+        }
     }
 }
