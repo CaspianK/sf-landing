@@ -806,6 +806,7 @@ ul {
   display: inline-flex;
   width: 18px;
   height: 18px;
+  border-radius: 3px;
   background: #E3B873;
   color: #fff;
   -webkit-box-pack: center;
