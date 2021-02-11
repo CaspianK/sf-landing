@@ -1010,6 +1010,26 @@ ul {
             display: block;
             width: 100%;
             margin-top: 73px;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                background-image: url('../img/carousel-control.svg');
+                top: calc(50% - 18px);
+                left: 14px;
+                width: 36px;
+                height: 36px;
+            }
+            &::after {
+                content: '';
+                transform: rotate(180deg);
+                position: absolute;
+                background-image: url('../img/carousel-control.svg');
+                top: calc(50% - 18px);
+                right: 14px;
+                width: 36px;
+                height: 36px;
+            }
         }
     }
     .control {
