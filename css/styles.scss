@@ -883,6 +883,9 @@ ul {
 }
 
 @media screen and (max-width: 1299px) {
+    .container {
+        max-width: 600px;
+    }
     .menu-content {
         padding-left: 18px;
         padding-right: 18px;
