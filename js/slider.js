@@ -31,6 +31,9 @@ function initSlider(options) {
     let arrows = document.querySelectorAll('.arrow')
     let dots
     let links
+    let city = document.querySelector('#city_detail')
+    let area = document.querySelector('#area_detail')
+    let time = document.querySelector('#time_detail')
     initImages()
     initArrows()
     if (options.dots) {
@@ -103,9 +106,9 @@ function initSlider(options) {
             links.querySelector('.title_carousel_active').classList.remove('title_carousel_active')
             links.querySelector('.title_carousel_' + number).classList.add('title_carousel_active')
         }
-        document.querySelector('#city_detail').innerHTML = images[number].city
-        document.querySelector('#area_detail').innerHTML = images[number].area
-        document.querySelector('#time_detail').innerHTML = images[number].time
+        city.innerHTML = images[number].city
+        area.innerHTML = images[number].area
+        time.innerHTML = images[number].time
     }
 }
 
