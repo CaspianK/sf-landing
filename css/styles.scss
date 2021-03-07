@@ -45,6 +45,7 @@ ul {
         font-size: 14px;
         line-height: 27px;
         margin-top: 34px;
+        grid-row-start: 3;
     }
     &_control {
         text-align: center;
@@ -113,6 +114,7 @@ ul {
         font-size: 27px;
         line-height: 37px;
         letter-spacing: -0.07em;
+        grid-row-start: 2;
         &-details {
             font-size: 18px;
             color: $maincolor;
@@ -338,13 +340,16 @@ ul {
         padding: 107px 134px 415px;
     }
     &__info {
-        width: 40%;
-        margin-top: 62.36px;
         position: relative;
+        display: grid;
+        grid-template-columns: 40fr 60fr;
+        grid-template-rows: 74px 74px 115px 215px 86px;
     }
     &__details {
         width: fit-content;
         display: grid;
+        grid-column-start: 1;
+        grid-row-start: 4;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         margin-top: 42px;
@@ -358,23 +363,39 @@ ul {
         width: 205.68px;
         justify-content: space-between;
         align-items: center;
+        align-self: flex-end;
     }
     &__carousel {
         margin-left: 30px;
-        width: calc(60% - 50px);
+        grid-column-start: 2;
+        grid-row-start: 1;
+        justify-self: flex-end;
+        &_mobile {
+            display: none;
+        }
+        &-image {
+            margin-top: 45.36px;
+            display: block;
+            position: relative;
+            width: 679px;
+            height: 482px;
+            * {
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                transition: opacity .3s ease;
+            }
+            &_active {
+                opacity: 1;
+            }
+        }
     }
     &__carousel-elements {
         display: flex;
-        width: 95%;
+        width: 90%;
         justify-content: space-between;
         padding: 0;
-    }
-    &__carousel-image {
-        margin-top: 45.36px;
-        display: block;
-    }
-    &__slider {
-        display: none;
     }
 }
 
@@ -402,12 +423,27 @@ ul {
 }
 
 .arrow {
-    background-image: url('../img/arrow.svg');
-    width: 41.46px;
-    height: 13.28px;
-    border: none;
-    background-color: transparent; 
-    cursor: pointer;
+    &_desktop{
+        background-image: url('../img/arrow.svg');
+        width: 41.46px;
+        height: 13.28px;
+        border: none;
+        background-color: transparent; 
+        cursor: pointer;
+    }
+    &_mobile {
+        display: none;
+        position: absolute;
+        background-image: url('../img/carousel-control.svg');
+        top: calc(50% - 18px);
+        left: 14px;
+        width: 36px;
+        height: 36px;
+        +.arrow_right {
+            right: 14px;
+            left: auto;
+        }
+    }
     &_right {
         transform: rotate(180deg);
     }
@@ -998,9 +1034,27 @@ ul {
         &__info {
             margin-top: 0;
             width: auto;
+            display: block;
         }
         &__carousel {
-            display: none;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            &-image {
+                &_mock {
+                    opacity: 0;
+                    position: relative;
+                }
+                width: 100%;
+                height: 100%;
+                margin-top: 73px;
+                img {
+                    width: 100%;
+                }
+            }
+            &-elements {
+                display: none;
+            }
         }
         &__slider-control {
             display: none;
@@ -1036,6 +1090,11 @@ ul {
                 width: 36px;
                 height: 36px;
             }
+        }
+    }
+    .arrow {
+        &_mobile {
+            display: block;
         }
     }
     .control {
